@@ -1,0 +1,64 @@
+.toggle-menu {
+  display: none;
+  cursor: pointer;
+  span {
+    width: 28px;
+    height: 4px;
+    position: relative;
+    margin: 15px 0;
+    background-color: $white;
+    //border-radius: 4px;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background-color: $white;
+      top: -8px;
+      //border-radius: 4px;
+      transform-origin: left;
+      transition: transform 0.2s ease-in;
+    }
+    &:after {
+      top: unset;
+      bottom: -8px;
+    }
+  }
+}
+
+@media screen and (max-width: $bp-m) {
+  .toggle-menu {
+    display: block;
+    z-index: 20;
+    right: 40px;
+    &.active {
+      position: fixed;
+      span {
+        background-color: transparent;
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+          bottom: -13px;
+        }
+      }
+    }
+    span {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: $bp-s) {
+  .toggle-menu {
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: $bp-xs) {
+  .toggle-menu {
+    right: 20px;
+  }
+}

@@ -1,0 +1,25 @@
+.swiper-container {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  .swiper-wrapper {
+    height: auto;
+  }
+  .swiper-slide {
+    max-width: 100%;
+  }
+}
+
+.swiper-pagination {
+  position: static;
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+.swiper-button-next, .swiper-button-prev {
+  position: static;
+  display: inline-block;
+  vertical-align: middle;
+
+}

@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Poppins:400,600,700');
+
+@font-face {
+  font-family: 'Din Pro';
+  src: url("../fonts/DINPro-Regular.woff2") format("woff2"),
+  url("../fonts/DINPro-Regular.woff") format("woff");
+  font-weight: normal;
+}
+
+$font-poppins: "Poppins", "Arial", sans-serif;
+$font-lato: "Lato", "Arial", sans-serif;
+$font-din: "Din Pro", "Arial", sans-serif;

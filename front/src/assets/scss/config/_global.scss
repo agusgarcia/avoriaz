@@ -1,0 +1,77 @@
+body {
+  color: $black;
+  background-color: $white;
+  font-family: $font-lato;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: $font-poppins;
+}
+
+h2 {
+  font-family: $font-poppins;
+  font-weight: 700;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 20px 0;
+  span {
+    color: $shakespeare;
+    display: block;
+  }
+}
+
+h3 {
+  font-family: $font-poppins;
+  font-weight: 700;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  text-transform: uppercase;
+  margin: 20px 0;
+  color: $white;
+}
+
+p {
+  line-height: normal;
+}
+
+a {
+  text-decoration: none;
+  line-height: normal;
+  color: inherit;
+  display: inline-block;
+}
+
+a, input, button, div {
+  -webkit-tap-highlight-color: rgba($black, 0);
+  &:focus {
+    outline: none;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: $bp-xl) {
+  h2 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: $bp-s) {
+  h2 {
+    font-size: 36px;
+    padding: 0 20px;
+  }
+}

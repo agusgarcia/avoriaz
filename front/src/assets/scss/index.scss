@@ -1,0 +1,21 @@
+// Plugin imports
+@import "~swiper/dist/css/swiper.min.css";
+
+// Website imports
+// Config
+@import "./config/reset";
+@import "./config/variables";
+@import "./config/font-face";
+@import "./config/global";
+// Partials
+@import "./partials/header";
+@import "./partials/footer";
+@import "./partials/menu";
+@import "./partials/hamburger";
+// Components
+@import "./components/buttons";
+// Layouts
+@import "layouts/homepage";
+// Vendor
+@import "./vendor/swiper";
+
