@@ -13,16 +13,63 @@
         <span></span>
     </div>
     <header>
-        <a href="/">LOGO</a>
-        <a href="/">Menu</a>
+        <a href="/" class="link__live button--big button--transparent">En live</a>
+        <a href="/"><img src="assets/images/original.jpg"/></a>
+        <div class="header__logos">
+            <img src="assets/images/original.jpg"/>
+            <img src="assets/images/original.jpg"/>
+            <img src="assets/images/original.jpg"/>
+            <img src="assets/images/original.jpg"/>
+        </div>
+        <div class="links__container">
+            <a href="/" class="button button--big button--transparent">Me rendre en station</a>
+            <a href="/" class="button button--big button--transparent">Nos forfaits</a>
+            <a href="/" class="button button--big button--pink">Réserver votre séjour</a>
+            <a href="/" class="menu button button--big button--white">Menu</a>
+            <nav>
+            </nav>
+        </div>
     </header>
     <div class="hero">
-        <div class="live">En Live <span>1111</span> <span>2222</span></div>
-        <div class="slider"></div>
+        <div class="slider__hero swiper-container js-hero-swiper" id="homepage_hero">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/images/push_10.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/push_10.jpg"/>
+                </div>
+            </div>
+        </div>
+        <div class="slider__logo swiper-container js-logo-swiper" id="homepage_logo">
+            <hr>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/images/avoriaz_experience.png"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/avoriaz_experience.png"/>
+                </div>
+            </div>
+        </div>
     </div>
-    <p class="scroll">Scroll</p>
+    <div class="live">
+        <div class="live__title">
+            <p class="title title--underline">En Live</p>
+        </div>
+        <ul>
+            <li>Nuages</li>
+            <li><span>-4°C</span>en station</li>
+            <li><span>120<sub>cm</sub> </span> au sommet</li>
+            <li><span>-4°C</span> nos webcams</li>
+        </ul>
+
+    </div>
+    <div class="scroll__container">
+        <p class="title title--underline">Scroll</p>
+    </div>
     <div class="accommodation">
-        <h3>Station ouverte du 14 décembre 2018 au 22 avril 2019</h3>
+        <h3 class="accommodation__title">Station ouverte du 14 décembre 2018 au 22 avril 2019</h3>
         <div class="accommodation__content">
             <div class="img__container img__container--left">
                 <img src="assets/images/push_1.jpg"/>
@@ -31,15 +78,17 @@
                 <img src="assets/images/push_2.jpg"/>
                 <div class="img__sidebar">
                     <h4 class="img__sidebar__overtitle">A magic winter</h4>
-                    <h5 class="img__sidebar__title">Hébérgements</h5>
+                    <h5 class="img__sidebar__title title--right">Hébérgements</h5>
                     <p class="img__sidebar__rotate">Élégance et architecture</p>
 
-                    <img src="assets/images/original.jpg"/>
+                    <div class="img__sidebar__brand">
+                        <img src="assets/images/original.jpg"/>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="accommodation__menu">
-            <p>Lorem ipsum</p>
+            <p class="small">Lorem ipsum</p>
             <p>Pour vivre un séjour avec plaisir et sérénité</p>
             <ul>
                 <li><a href="/">Résidences</a></li>
@@ -52,11 +101,11 @@
     <div class="restaurants img__container">
         <img src="assets/images/push_3.jpg"/>
         <div class="text__container">
-            <p>Restaurants</p>
+            <p class="title title--top">Restaurants</p>
         </div>
     </div>
     <div class="trip img__container">
-        <p class="title">Séjour <span>insolite</span></p>
+        <p class="trip__title">Séjour <span>insolite</span></p>
         <img src="assets/images/push_4.jpg"/>
         <div class="text__container">
             <p> nuit pour 2 <span>Igloo</span></p>
@@ -66,16 +115,17 @@
     <div class="activities img__container">
         <img src="assets/images/push_5.jpg"/>
         <div class="img__sidebar img__sidebar--left img__sidebar--full">
-            <h4 class="img__sidebar__overtitle">A magic winter</h4>
-            <h5 class="img__sidebar__title">Hébérgements</h5>
-            <p class="img__sidebar__rotate">Élégance et architecture</p>
+            <h4 class="img__sidebar__overtitle">A great winter</h4>
+            <h5 class="img__sidebar__title title--right">Activités</h5>
+            <p class="img__sidebar__rotate">Terroir et authenticité</p>
 
             <img src="assets/images/original.jpg"/>
         </div>
     </div>
-    <div class="img__container">
+    <figure class="img__container">
         <img src="assets/images/push_6.jpg"/>
-    </div>
+        <figcaption class="small">La ferme des Alpages</figcaption>
+    </figure>
     <div class="activities__list">
         <div class="activities__group">
             <div class="activity">
@@ -86,7 +136,7 @@
             </div>
 
         </div>
-        <p class="activities__title">Hors pistes</p>
+        <p class="small">Hors pistes</p>
         <div class="activities__menu">
             <p>Ne pas faire le Mur Suisse, c'est comme aller à Paris sans vor la Tour Eiffel !</p>
             <ul>
@@ -168,7 +218,8 @@
     <div class="experience">
         <div class="experience__text">
             <p>Ride & music</p>
-            <p>Le mix parfait de concerts plus déjantés les uns que les autres ! <br><span>Expérience</span> au coeur des
+            <p>Le mix parfait de concerts plus déjantés les uns que les autres ! <br><span>Expérience</span> au coeur
+                des
                 pistes</p></div>
 
         <div class="experience__image">

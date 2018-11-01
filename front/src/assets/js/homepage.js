@@ -10,13 +10,26 @@ export default class Homepage {
   initEls () {
     this.$els = {
       body: $('body'),
+      header: $('header'),
     };
+    this.logoSlider = null;
+    this.heroSlider = null;
     this.offersSlider = null;
+    this.logoSliderId = '#homepage_logo';
+    this.heroSliderId = '#homepage_hero';
     this.offersSliderId = '#homepage_offers';
   };
 
   initEvents () {
     this.initSliders();
+    document.addEventListener('scroll', () => {
+      // console.log(window.scrollY)
+      if (window.scrollY > 70 && !this.$els.header.hasClass('sticky')) {
+        this.$els.header.addClass('sticky');
+      } else if (window.scrollY < 70 && this.$els.header.hasClass('sticky')) {
+        this.$els.header.removeClass('sticky');
+      }
+    }, true);
   }
 
   initSliders () {
@@ -47,5 +60,18 @@ export default class Homepage {
       },
 
     });
+    this.heroSlider = new Swiper(this.heroSliderId, {
+      watchOverflow: true,
+      slidesPerView: 1,
+    });
+    this.logoSlider = new Swiper(this.logoSliderId, {
+      watchOverflow: true,
+      slidesPerView: 2,
+      centeredSlides: true,
+      speed: 600,
+    });
+
+    this.heroSlider.controller.control = this.logoSlider;
+    this.logoSlider.controller.control = this.heroSlider;
   }
 }
