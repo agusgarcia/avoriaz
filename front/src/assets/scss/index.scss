@@ -6,6 +6,7 @@
 @import "./config/reset";
 @import "./config/variables";
 @import "./config/font-face";
+@import "./config/mixins";
 @import "./config/global";
 // Partials
 @import "./partials/header";
@@ -14,6 +15,8 @@
 @import "./partials/hamburger";
 // Components
 @import "./components/buttons";
+@import "./components/sidebar";
+@import "./components/img-container";
 // Layouts
 @import "layouts/homepage";
 // Vendor

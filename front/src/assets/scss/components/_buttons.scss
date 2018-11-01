@@ -1,0 +1,36 @@
+.button {
+  font-weight: 600;
+  font-size: 12px;
+  background-color: $blue-dark;
+  color: $white;
+  padding: 10px 15px;
+  &--big {
+    padding: 30px 25px;
+  }
+  &--transparent {
+    background-color: transparent;
+  }
+  &--white {
+    background-color: $white;
+    color: $blue;
+  }
+  &--blue {
+    background-color: $blue;
+  }
+  &--blue-light {
+    background-color: $blue-light;
+  }
+  &--pink {
+    background-color: $pink;
+  }
+  &--yellow {
+    background-color: $yellow;
+  }
+  &--outlined {
+    background-color: transparent;
+    border: 2px solid $blue-dark;
+    .button--white {
+      border-color: $white;
+    }
+  }
+}

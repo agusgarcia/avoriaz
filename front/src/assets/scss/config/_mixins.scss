@@ -1,0 +1,35 @@
+%title {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  position: relative;
+  &.title {
+    &--top {
+      &:after {
+        top: -10px;
+        bottom: auto;
+        width: 40px;
+        left: auto;
+        right: -10px;
+      }
+    }
+    &--right {
+      &:after {
+        left: auto;
+        width: 40px;
+      }
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $grey;
+  }
+}
