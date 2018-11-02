@@ -15,11 +15,56 @@
   position: static;
   display: inline-block;
   width: auto;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
+
+.swiper-button-prev {
+  margin-right: 45px;
+
+  &:before {
+    font-family: $icomoon-font-family;
+    content: $icon-chevron-left;
+  }
+}
+
+.swiper-button-next {
+  margin-left: 15px;
+  &:before {
+    font-family: $icomoon-font-family;
+    content: $icon-chevron-right;
+  }
+}
+
 .swiper-button-next, .swiper-button-prev {
   position: static;
   display: inline-block;
-  vertical-align: middle;
+  background-image: none;
+  font-size: 14px;
+  vertical-align: baseline;
 
+}
+.swiper__navigation {
+  padding: 20px 0;
+}
+.swiper-pagination {
+  color: $grey-dark;
+  padding-left: 20px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $grey;
+  }
+  .swiper-pagination-total {
+    margin-left: 10px;
+  }
+  .swiper-pagination-current {
+    font-weight: 700;
+    margin: 0 10px;
+  }
 }

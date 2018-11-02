@@ -8,6 +8,7 @@
 @import "./config/font-face";
 @import "./config/mixins";
 @import "./config/global";
+@import "./config/icons";
 // Partials
 @import "./partials/header";
 @import "./partials/footer";
@@ -17,6 +18,7 @@
 @import "./components/buttons";
 @import "./components/sidebar";
 @import "./components/img-container";
+@import "./components/navlist";
 // Layouts
 @import "layouts/homepage";
 // Vendor

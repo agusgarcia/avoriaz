@@ -1,17 +1,17 @@
 .img__sidebar {
   position: absolute;
-  background-color: white;
+  background-color: $white;
   top: 10%;
   right: 0;
   bottom: 10%;
-  width: 150px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 0 80px 20px rgba(0, 0, 0, 0.18);
   &--left {
     right: auto;
     left: 0;
@@ -20,23 +20,25 @@
     bottom: 0;
   }
   &__rotate {
-    //transform: rotate(90deg);
     writing-mode: vertical-rl;
     text-orientation: mixed;
     margin-right: auto;
     width: auto;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: $weight-medium;
     padding: 20px 0;
+    color: $black;
   }
   &__overtitle {
     @extend %title;
     margin: 20px 0 40px;
+    line-height: 1.5em;
+    font-size: 20px;
   }
   &__title {
     @extend %title;
-    font-size: 24px;
+    font-size: 32px;
     letter-spacing: 4px;
     width: fit-content;
     @supports (-ms-ime-align: auto) {
@@ -49,5 +51,20 @@
     width: calc(100% + 40px);
     border-top: 1px solid $grey;
     padding: 20px;
+  }
+}
+
+@media screen and (max-width: $bp-xxl) {
+  .img__sidebar {
+    width: 150px;
+    &__title {
+      font-size: 24px;
+    }
+    &__overtitle {
+      font-size: 16px;
+    }
+    &__rotate {
+      font-size: 12px;
+    }
   }
 }

@@ -2,8 +2,9 @@
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 600;
+  font-weight: $weight-medium;
   position: relative;
+  color: $black;
   &.title {
     &--top {
       &:after {
@@ -17,6 +18,12 @@
     &--right {
       &:after {
         left: auto;
+        width: 40px;
+      }
+    }
+    &--left {
+      &:after {
+        right: auto;
         width: 40px;
       }
     }

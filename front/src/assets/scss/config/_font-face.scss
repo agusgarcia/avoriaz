@@ -6,6 +6,14 @@
   font-weight: normal;
 }
 */
+
+$weight-thin: 200;
+$weight-light: 300;
+$weight-medium: 500;
+$weight-bold: 700;
+$weight-black: 800;
+$weight-ultra: 900;
+
 @font-face {
   font-family: 'Gotham';
   src: url("./../fonts/Gotham-Book.otf") format("opentype");
@@ -23,86 +31,89 @@
 @font-face {
   font-family: 'Gotham';
   src: url("../fonts/Gotham-Light.otf") format("opentype");
-  font-weight: 300;
+  font-weight: $weight-light;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url("../fonts/Gotham-LightItalic.otf") format("opentype");
-  font-weight: 300;
+  font-weight: $weight-light;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url("../fonts/Gotham-Thin.otf") format("opentype");
-  font-weight: 200;
+  font-weight: $weight-thin;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url("../fonts/Gotham-ThinItalic.otf") format("opentype");
-  font-weight: 200;
+  font-weight: $weight-thin;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url("../fonts/Gotham-Medium.otf") format("opentype");
-  font-weight: 600;
+  font-weight: $weight-medium;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url("../fonts/Gotham-MediumItalic.otf") format("opentype");
-  font-weight: 600;
+  font-weight: $weight-medium;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url("../fonts/Gotham-Bold.otf") format("opentype");
-  font-weight: 700;
+  font-weight: $weight-bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url("../fonts/Gotham-BoldItalic.otf") format("opentype");
-  font-weight: 700;
+  font-weight: $weight-bold;
   font-style: italic;
 }
+
 
 @font-face {
   font-family: 'Gotham';
   src: url("../fonts/Gotham-Black.otf") format("opentype");
-  font-weight: 800;
+  font-weight: $weight-black;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url("../fonts/Gotham-BlackItalic.otf") format("opentype");
-  font-weight: 800;
+  font-weight: $weight-black;
   font-style: italic;
 }
+
 
 @font-face {
   font-family: 'Gotham';
   src: url("../fonts/Gotham-Ultra.otf") format("opentype");
-  font-weight: 900;
+  font-weight: $weight-ultra;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url("../fonts/Gotham-UltraItalic.otf") format("opentype");
-  font-weight: 900;
+  font-weight: $weight-ultra;
   font-style: italic;
 }
+
 
 
 $font-gotham: "Gotham", "Arial", sans-serif;

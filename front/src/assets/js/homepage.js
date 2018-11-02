@@ -1,5 +1,9 @@
 import $ from 'jquery';
 import Swiper from 'swiper/dist/js/swiper.js';
+import TweenLite from 'TweenLite';
+import ScrollMagic from 'ScrollMagic';
+import 'animation.gsap';
+import 'debug.addIndicators';
 
 export default class Homepage {
   constructor () {
@@ -18,10 +22,14 @@ export default class Homepage {
     this.logoSliderId = '#homepage_logo';
     this.heroSliderId = '#homepage_hero';
     this.offersSliderId = '#homepage_offers';
+    this.scrollController = new ScrollMagic.Controller();
   };
 
   initEvents () {
     this.initSliders();
+    this.initScrollMagic();
+
+    /* Make header sticky on scroll */
     document.addEventListener('scroll', () => {
       // console.log(window.scrollY)
       if (window.scrollY > 70 && !this.$els.header.hasClass('sticky')) {
@@ -53,6 +61,7 @@ export default class Homepage {
           }
         },
       },
+      speed: 600,
       // Navigation arrows
       navigation: {
         nextEl: `${this.offersSliderId} .swiper-button-next`,
@@ -63,15 +72,55 @@ export default class Homepage {
     this.heroSlider = new Swiper(this.heroSliderId, {
       watchOverflow: true,
       slidesPerView: 1,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      on: {
+        'slideChange': () => {
+          console.log('slideChange');
+          const $prev = $(`${this.logoSliderId} .swiper-slide`);
+          $prev.off('mouseover');
+          this.sliderTimeout = setTimeout(() => {
+            console.log('call Slide');
+            this.slideOnHover();
+          }, 1000);
+        }
+      }
     });
     this.logoSlider = new Swiper(this.logoSliderId, {
       watchOverflow: true,
       slidesPerView: 2,
       centeredSlides: true,
-      speed: 600,
     });
 
     this.heroSlider.controller.control = this.logoSlider;
     this.logoSlider.controller.control = this.heroSlider;
+    this.slideOnHover();
+
+  }
+
+  slideOnHover () {
+    // Animation to slide hero slider
+    const $prev = $(`${this.logoSliderId} .swiper-slide-prev`);
+    const $next = $(`${this.logoSliderId} .swiper-slide-next`);
+    $next.on('mouseover', () => {
+      console.log('hovered');
+      this.heroSlider.slideNext(1500);
+    });
+    $prev.on('mouseover', () => {
+      console.log('hovered prev');
+      this.heroSlider.slidePrev(1500);
+    });
+    clearTimeout(this.sliderTimeout);
+  }
+
+  initScrollMagic () {
+    this.scene = new ScrollMagic.Scene({
+      triggerElement: this.offersSliderId,
+    }).on('start', () => {
+      this.offersSlider.params.autoplay.delay = 7000;
+      this.offersSlider.autoplay.start();
+    }).addTo(this.scrollController);
   }
 }
