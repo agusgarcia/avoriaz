@@ -260,7 +260,7 @@
     padding: 30px 50px 0;
     text-transform: uppercase;
     min-width: 390px;
-    margin-top: 25%;
+    margin-top: 230px;
     color: $white;
     &__title {
       font-weight: bold;
@@ -302,9 +302,12 @@
     grid-column: 6 / -2;
     grid-row: 7;
     margin-left: -100px;
-    margin-top: -272px;
+    margin-top: -273px;
     position: relative;
     order: 2;
+    > img {
+      min-height: 450px;
+    }
     .img__sidebar {
       top: 75px;
       &__title {
@@ -651,15 +654,25 @@
         }
       }
     }
+    .activities {
+      + .img__container {
+        grid-column-end: 7;
+      }
+    }
     .magazine {
       flex-direction: column;
       flex-wrap: nowrap;
       &__aside {
         min-width: 200px;
+        max-height: 750px;
       }
       article {
         margin-right: 50px;
+        margin-top: calc(10vh - 20px);
       }
+    }
+    .experience__text p {
+      font-size: 32px;
     }
   }
 }
