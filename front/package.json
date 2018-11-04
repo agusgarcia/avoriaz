@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production --config webpack.prod.js",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development  --host 0.0.0.0"
   },
   "author": "Business For Fun - Agustina Garcia",
   "license": "ISC",
@@ -36,7 +36,7 @@
     "svg-url-loader": "^2.3.2",
     "url-loader": "^1.0.1",
     "webpack": "^4.16.1",
-    "webpack-cli": "^2.0.14",
+    "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.4",
     "webpack-md5-hash": "0.0.6"
   },

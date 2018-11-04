@@ -42,3 +42,32 @@
     }
   }
 }
+
+@media screen and (max-width: $bp-s) {
+  .navlist {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: $bp-xs) {
+  .navlist {
+    font-size: 24px;
+    li {
+      &:hover {
+        &:before {
+          content: '-';
+          font-weight: $weight-thin;
+          position: absolute;
+          left: -210px;
+          top: 0;
+          bottom: 0;
+          width: 200px;
+          line-height: 1.5em;
+          text-align: right;
+          font-size: inherit;
+          color: inherit;
+        }
+      }
+    }
+  }
+}

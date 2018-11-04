@@ -30,8 +30,8 @@ header {
     grid-column-start: 1;
     width: 100%;
     top: 0;
-    background: white;
-    color: black;
+    background: $white;
+    color: $black;
     padding: 10px;
     .header__logos {
       display: block;
@@ -76,5 +76,37 @@ header {
       }
     }
   }
+}
 
+@media screen and (max-width: $bp-s) {
+  header {
+    .links__container {
+      span {
+        display: none;
+      }
+    }
+    &.sticky .header__logos {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $bp-xs) {
+  header {
+    grid-column-start: 1;
+    .button--big {
+      padding: 20px;
+    }
+    .links__container {
+      a:not(.menu) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $bp-xxs) {
+  header {
+    margin-top: 0;
+  }
 }

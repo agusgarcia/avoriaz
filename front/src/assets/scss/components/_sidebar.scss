@@ -68,3 +68,28 @@
     }
   }
 }
+
+@media screen and (max-width: $bp-xs) {
+  .img__sidebar {
+    width: 100%;
+    max-width: unset;
+    height: auto;
+    position: relative;
+    top: 0;
+    &__overtitle {
+      font-size: 12px;
+      max-width: 100px;
+      margin-top: 0;
+      margin-bottom: 40px;
+      line-height: 1.2em;
+    }
+    &__rotate, &__brand {
+      display: none;
+    }
+    &__title {
+      align-self: flex-start;
+      margin-left: -40px;
+      margin-bottom: 30px;
+    }
+  }
+}

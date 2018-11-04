@@ -72,6 +72,7 @@ export default class Homepage {
     this.heroSlider = new Swiper(this.heroSliderId, {
       watchOverflow: true,
       slidesPerView: 1,
+      speed: 1000,
       effect: 'fade',
       fadeEffect: {
         crossFade: true
@@ -92,6 +93,11 @@ export default class Homepage {
       watchOverflow: true,
       slidesPerView: 2,
       centeredSlides: true,
+      breakpoints: {
+        480: {
+          slidesPerView: 1,
+        }
+      },
     });
 
     this.heroSlider.controller.control = this.logoSlider;
