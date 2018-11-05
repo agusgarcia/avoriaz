@@ -93,8 +93,12 @@ export default class Homepage {
       watchOverflow: true,
       slidesPerView: 2,
       centeredSlides: true,
+      speed: 800,
       breakpoints: {
-        480: {
+        768: {
+          slidesPerView: 1.5,
+        },
+        640: {
           slidesPerView: 1,
         }
       },

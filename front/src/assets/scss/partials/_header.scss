@@ -12,8 +12,22 @@ header {
   font-weight: 600;
   font-size: 12px;
   text-transform: uppercase;
-  margin: 70px 0 0;
-  transition: all 0.3s ease;
+  margin: 50px 0 0;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-property: width, background-color, padding-left, padding-right, color;
+  height: 110px;
+  .logo {
+    width: 300px;
+    margin-left: 20px;
+    max-width: 20vw;
+    margin-top: 20px;
+  }
+  .logo--sticky {
+    width: 200px;
+    margin: 0 30px;
+    display: none;
+  }
   i {
     font-size: 18px;
     margin-right: 5px;
@@ -21,9 +35,16 @@ header {
   }
   .button.menu {
     color: $black;
+    margin-top: -1px;
+    i {
+      vertical-align: sub;
+    }
   }
   .link__live {
-    display: none;
+    margin-left: 20px;
+  }
+  .link__logo {
+    margin-right: auto;
   }
   &.sticky {
     position: sticky;
@@ -32,11 +53,26 @@ header {
     top: 0;
     background: $white;
     color: $black;
-    padding: 10px;
-    .header__logos {
+    padding: 20px;
+    margin-bottom: 20px;
+    height: auto;
+    .logo {
+      display: none;
+    }
+    .link__logo {
+      margin-right: 0;
+    }
+    .logo--sticky {
       display: block;
+    }
+    .header__logos {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+      padding-right: 10px;
       img {
         width: 50px;
+        margin: 0 5px;
       }
     }
     .link__live {
@@ -54,8 +90,11 @@ header {
       color: $white;
     }
     .button {
-      &:not(:last-child) {
+      &:not(.link__live) {
         margin-right: 10px;
+      }
+     &.menu {
+        margin-right: 0;
       }
     }
   }
@@ -65,14 +104,57 @@ header {
   .links__container {
     display: flex;
     align-items: center;
-    a {
-      //padding: 20px;
-      &.book {
-        //background-color: #ff4364;
+    i {
+      margin-right: 10px;
+      vertical-align: sub;
+    }
+  }
+}
+
+@media screen and (max-width: $bp-xl) {
+  header {
+    &.sticky {
+      .header__logos {
+        display: none;
       }
-      &.menu {
-        //background-color: white;
-        //color: black;
+    }
+  }
+}
+
+@media screen and (max-width: $bp-l) {
+  header {
+    .logo {
+      max-width: 25vw;
+    }
+    .links__container {
+      a {
+        padding: 20px;
+        margin-right: 10px;
+      }
+      a:not(.button--book):not(.menu) {
+        background-color: $white;
+        color: #a7adb7;
+        border: 1px solid #a7adb7;
+        width: 60px;
+        i {
+          margin-right: 0;
+        }
+        span {
+          display: none;
+        }
+      }
+      .button--book {
+        //padding: 20px;
+        //margin-right: 10px;
+        span span {
+          display: none;
+        }
+      }
+      .menu {
+        //padding: 20px;
+        margin-right: 0;
+        background-color: $blue;
+        color: $white;
       }
     }
   }
@@ -80,6 +162,13 @@ header {
 
 @media screen and (max-width: $bp-s) {
   header {
+    position: sticky;
+    top: 0;
+    .button--book {
+      i {
+        margin-right: 0;
+      }
+    }
     .links__container {
       span {
         display: none;
@@ -91,22 +180,85 @@ header {
   }
 }
 
+@media screen and (max-width: 700px) {
+  header {
+    grid-column-start: 1;
+    background-color: $white;
+    height: auto;
+    margin-top: 0;
+    &.sticky {
+      padding: 0;
+      margin: 0;
+    }
+    .link__logo {
+      order: -1;
+      margin-right: 0;
+      .logo {
+        display: none;
+        &--sticky {
+          display: block;
+        }
+      }
+    }
+    .link__live.button--outlined {
+      margin: auto;
+      color: $blue;
+      border-color: $blue;
+    }
+    .links__container {
+      a:not(.button--book):not(.menu) {
+        display: none;
+      }
+      .menu {
+        padding: 30px 20px;
+      }
+      .button--book {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        display: block;
+        margin: auto !important;
+        width: 280px;
+        padding: 25px;
+        i {
+          margin-right: 10px;
+        }
+        span, span span {
+          margin-left: 4px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $bp-xs) {
   header {
     grid-column-start: 1;
     .button--big {
       padding: 20px;
     }
-    .links__container {
-      a:not(.menu) {
-        display: none;
-      }
-    }
   }
 }
 
 @media screen and (max-width: $bp-xxs) {
   header {
-    margin-top: 0;
+    .logo--sticky {
+      width: 150px;
+      margin-right: 0;
+      margin-left: 15px;
+    }
+    .link__live.button--outlined {
+      padding: 10px 10px;
+      margin: 20px 10px 20px 0;
+    }
+    .links__container {
+      height: 100%;
+      background-color: $blue;
+      .menu {
+        padding: 10px 10px;
+      }
+    }
   }
 }

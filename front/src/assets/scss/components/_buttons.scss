@@ -3,8 +3,9 @@
   font-size: 12px;
   background-color: $blue-dark;
   color: $white;
-  padding: 10px 15px;
+  padding: 15px;
   text-transform: uppercase;
+  text-align: center;
   &--big {
     padding: 30px 25px;
   }
@@ -30,9 +31,18 @@
   &--outlined {
     background-color: transparent;
     border: 3px solid $blue-dark;
+    &--thin {
+      border-width: 1px;
+    }
     &.button--white {
       border-color: $white;
       color: $white;
     }
+  }
+}
+
+@media screen and (max-width: $bp-xl) {
+  .button--big {
+    padding: 30px 20px;
   }
 }
