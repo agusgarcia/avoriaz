@@ -1,7 +1,8 @@
 .editorial {
+
   .wrapper {
     display: grid;
-    grid-template-columns: 0 repeat(2, 0.7fr) repeat(4, 1fr) repeat(2, 0.7fr) 0;
+    grid-template-columns: $grid-columns;
     grid-gap: 50px;
   }
   main {
@@ -96,7 +97,7 @@
   }
   .content {
     display: grid;
-    grid-template-columns: 0 repeat(2, 0.7fr) repeat(4, 1fr) repeat(2, 0.7fr) 0;
+    grid-template-columns: $grid-columns;
     grid-template-rows: repeat(auto-fill, 100%);
     grid-gap: 50px;
     height: auto;
@@ -130,7 +131,7 @@
 
       @supports (object-fit: cover) {
         display: grid;
-        grid-template-columns: 0 repeat(2, 0.7fr) repeat(4, 1fr) repeat(2, 0.7fr) 0;
+        grid-template-columns: $grid-columns;
         grid-gap: 0 50px;
       }
     }
@@ -138,7 +139,7 @@
 }
 
 @media screen and (max-width: $bp-xxl) {
-  .edito {
+  .editorial {
     .hero {
       &__title {
         font-size: 75px;
@@ -148,8 +149,21 @@
   }
 }
 
+@media screen and (max-width: $bp-xl) {
+  .editorial {
+    .heading {
+      .head {
+        flex-basis: 70%;
+      }
+    }
+    .content {
+      grid-template-columns: $grid-columns-l;
+    }
+  }
+}
+
 @media screen and (max-width: $bp-l) {
-  .edito {
+  .editorial {
     .hero {
       &__title {
         font-size: 60px;

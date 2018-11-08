@@ -24,3 +24,6 @@ $bp-m: 940px;
 $bp-s: 768px;
 $bp-xs: 640px;
 $bp-xxs: 480px;
+
+$grid-columns: 0 repeat(2, 0.7fr) repeat(4, 1fr) repeat(2, 0.7fr) 0;
+$grid-columns-l: 0 repeat(2, 0.7fr) repeat(4, 0.7fr) repeat(2, 0.7fr) 0;
