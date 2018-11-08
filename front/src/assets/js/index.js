@@ -12,6 +12,7 @@ export class App {
   initEls () {
     this.$els = {
       $homepage: $('.js-homepage') || null,
+      $editorial: $('.js-editorial') || null,
     };
   }
 
@@ -25,6 +26,15 @@ export class App {
       import(/* webpackChunkName: "homepage" */ './homepage.js').then(module => {
         const Homepage = module.default;
         new Homepage();
+      }).catch((e) => {
+        console.log(e);
+      });
+    }
+
+    if (this.$els.$editorial.length > 0) {
+      import(/* webpackChunkName: "editorial" */ './editorial.js').then(module => {
+        const Editorial = module.default;
+        new Editorial();
       }).catch((e) => {
         console.log(e);
       });

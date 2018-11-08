@@ -12,7 +12,6 @@ header {
   font-weight: 600;
   font-size: 12px;
   text-transform: uppercase;
-  margin: 50px 0 0;
   transition-duration: 0.3s;
   transition-timing-function: ease;
   transition-property: width, background-color, padding-left, padding-right, color;
@@ -38,6 +37,11 @@ header {
     margin-top: -1px;
     i {
       vertical-align: sub;
+    }
+  }
+  .button--book {
+    span span {
+      margin-left: 3px;
     }
   }
   .link__live {
@@ -93,7 +97,7 @@ header {
       &:not(.link__live) {
         margin-right: 10px;
       }
-     &.menu {
+      &.menu {
         margin-right: 0;
       }
     }

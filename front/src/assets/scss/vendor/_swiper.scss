@@ -16,6 +16,12 @@
   display: inline-block;
   width: auto;
   vertical-align: baseline;
+  &-bullet {
+    &s {
+      margin-top: 30px;
+    }
+    background-color: $white;
+  }
 }
 
 .swiper-button-prev {
@@ -43,9 +49,11 @@
   vertical-align: baseline;
 
 }
+
 .swiper__navigation {
   padding: 20px 0;
 }
+
 .swiper-pagination {
   color: $grey-dark;
   padding-left: 20px;

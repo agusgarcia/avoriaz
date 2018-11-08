@@ -22,6 +22,15 @@ export default class Common {
     this.$els.toggleMenuButton.on('click', this.toggleMenu.bind(this));
     this.$els.menuLinks.on('click', this.toggleMenu.bind(this));
     this.$els.anchors.on('click', this.smoothScroll.bind(this));
+    /* Make header sticky on scroll */
+    document.addEventListener('scroll', () => {
+      // console.log(window.scrollY)
+      if (window.scrollY > 70 && !this.$els.header.hasClass('sticky')) {
+        this.$els.header.addClass('sticky');
+      } else if (window.scrollY < 70 && this.$els.header.hasClass('sticky')) {
+        this.$els.header.removeClass('sticky');
+      }
+    }, true);
   }
 
   toggleMenu () {

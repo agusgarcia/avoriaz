@@ -16,6 +16,9 @@ $icon-instagram: "\e90b";
 $icon-twitter: "\e90c";
 $icon-youtube: "\e90d";
 $icon-dolly: "\e90e";
+$icon-download: "\e90f";
+$icon-quotes: "\e910";
+$icon-video: "\e911";
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
@@ -83,6 +86,13 @@ $icon-dolly: "\e90e";
     content: $icon-chevron-right;
   }
 }
+.icon-chevron-down {
+  &:before {
+    content: $icon-chevron-left;
+    transform: rotate(-90deg);
+    display: inline-block;
+  }
+}
 .icon-menu {
   &:before {
     content: $icon-menu;
@@ -116,6 +126,24 @@ $icon-dolly: "\e90e";
 .icon-dolly {
   &:before {
     content: $icon-dolly;
+  }
+}
+
+.icon-download {
+  &:before {
+    content: $icon-download;
+  }
+}
+
+.icon-video {
+  &:before {
+    content: $icon-video;
+  }
+}
+
+.icon-quotes {
+  &:before {
+    content: $icon-quotes;
   }
 }
 

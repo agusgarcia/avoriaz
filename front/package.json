@@ -10,7 +10,7 @@
   "author": "Business For Fun - Agustina Garcia",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^8.3.0",
+    "autoprefixer": "^9.3.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.6",
     "babel-loader": "^7.1.4",
@@ -48,6 +48,7 @@
     "handlebars-loader": "^1.7.0",
     "jquery": "^3.3.1",
     "moment": "^2.22.2",
+    "plyr": "^3.4.6",
     "scrollmagic": "^2.0.6",
     "swiper": "^4.4.1",
     "url-polyfill": "^1.0.13"

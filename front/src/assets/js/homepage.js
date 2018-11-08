@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import Swiper from 'swiper/dist/js/swiper.js';
-import TweenLite from 'TweenLite';
 import ScrollMagic from 'ScrollMagic';
 import 'animation.gsap';
 import 'debug.addIndicators';
@@ -28,16 +27,6 @@ export default class Homepage {
   initEvents () {
     this.initSliders();
     this.initScrollMagic();
-
-    /* Make header sticky on scroll */
-    document.addEventListener('scroll', () => {
-      // console.log(window.scrollY)
-      if (window.scrollY > 70 && !this.$els.header.hasClass('sticky')) {
-        this.$els.header.addClass('sticky');
-      } else if (window.scrollY < 70 && this.$els.header.hasClass('sticky')) {
-        this.$els.header.removeClass('sticky');
-      }
-    }, true);
   }
 
   initSliders () {
@@ -107,7 +96,6 @@ export default class Homepage {
     this.heroSlider.controller.control = this.logoSlider;
     this.logoSlider.controller.control = this.heroSlider;
     this.slideOnHover();
-
   }
 
   slideOnHover () {

@@ -1,5 +1,6 @@
 // Plugin imports
 @import "~swiper/dist/css/swiper.min.css";
+@import url("~plyr/dist/plyr.css");
 
 // Website imports
 // Config
@@ -19,8 +20,13 @@
 @import "./components/sidebar";
 @import "./components/img-container";
 @import "./components/navlist";
+@import "./components/lines";
+@import "./components/layouts";
+@import "./components/price";
 // Layouts
 @import "layouts/homepage";
+@import "layouts/editorial";
+@import "layouts/portail";
 // Vendor
 @import "./vendor/swiper";
 

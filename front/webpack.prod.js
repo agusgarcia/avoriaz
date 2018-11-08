@@ -156,6 +156,14 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/edito.html',
+      filename: 'edito.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/portail.html',
+      filename: 'portail.html'
+    }),
     new webpack.ProvidePlugin({
       Promise: 'es6-promise'
     }),

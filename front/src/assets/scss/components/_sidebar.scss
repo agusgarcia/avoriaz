@@ -1,3 +1,20 @@
+/* Push sidebar */
+
+.sidebar {
+  background-color: $pink;
+  color: $white;
+  padding: 140px 50px 10px;
+  display: flex;
+  flex-direction: column;
+  .price {
+    margin: 40px 0 30px;
+  }
+  .button {
+    margin: auto;
+  }
+}
+
+/* White sidebar inside an image */
 .img__sidebar {
   position: absolute;
   background-color: $white;
@@ -11,7 +28,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  box-shadow: 0 0 80px 20px rgba(0, 0, 0, 0.18);
+  box-shadow: $box-shadow;
   &--left {
     right: auto;
     left: 0;
@@ -68,7 +85,6 @@
     }
   }
 }
-
 @media screen and (max-width: $bp-xs) {
   .img__sidebar {
     width: 100%;

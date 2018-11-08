@@ -1,13 +1,13 @@
 .button {
   font-weight: $weight-bold;
-  font-size: 12px;
+  font-size: 13px;
   background-color: $blue-dark;
   color: $white;
-  padding: 15px;
+  padding: 21px 41px;
   text-transform: uppercase;
   text-align: center;
   &--big {
-    padding: 30px 25px;
+    padding: 32px 27px;
   }
   &--transparent {
     background-color: transparent;
@@ -30,13 +30,50 @@
   }
   &--outlined {
     background-color: transparent;
-    border: 3px solid $blue-dark;
+    border: 2px solid $blue-dark;
+    color: $blue-dark;
+    padding: 15px 25px;
+
+    &.button--big {
+      border-width: 3px;
+      padding: 30px 25px;
+    }
     &--thin {
       border-width: 1px;
     }
     &.button--white {
       border-color: $white;
       color: $white;
+    }
+  }
+  &--contact {
+    border: 1px solid $grey-light;
+    background-color: transparent;
+    color: $blue-dark;
+    padding: 18px 19px;
+    &.button--pink {
+      color: $pink;
+    }
+  }
+  &__container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: $weight-medium;
+
+    a {
+      margin: 10px 0 5px 0;
+    }
+    i {
+      font-size: 18px;
+      + span {
+        color: inherit;
+        margin-left: 10px;
+      }
+    }
+    span {
+      color: $grey-light;
+      font-size: 12px;
     }
   }
 }
