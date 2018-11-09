@@ -16,6 +16,7 @@ export default class Editorial {
       body: $('body'),
       header: $('header'),
       blocks: $('.js-layout-blocks .block'),
+      blocksContainer: $('.js-layout-blocks'),
       overflowButton: $('.js-overflow-button'),
     };
     this.gallerySlider = null;
@@ -95,6 +96,7 @@ export default class Editorial {
         $(block).addClass('overflow');
       }
     }
+    this.$els.blocksContainer.addClass('updated');
   }
 
   toggleBlock (e) {

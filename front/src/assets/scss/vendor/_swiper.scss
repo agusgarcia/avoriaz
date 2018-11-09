@@ -76,3 +76,9 @@
     margin: 0 10px;
   }
 }
+
+@media screen and (max-width: $bp-s) {
+  .swiper-pagination-bullets {
+    margin-top: 15px;
+  }
+}

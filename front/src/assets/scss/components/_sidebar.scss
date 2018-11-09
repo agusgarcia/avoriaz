@@ -72,6 +72,14 @@
 }
 
 @media screen and (max-width: $bp-xxl) {
+  .sidebar {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 90px;
+    .title {
+      font-size: 26px;
+    }
+  }
   .img__sidebar {
     width: 150px;
     &__title {
@@ -85,6 +93,27 @@
     }
   }
 }
+
+@media screen and (max-width: $bp-xl) {
+  .sidebar {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: $bp-s) {
+  .sidebar {
+    padding-top: 30px;
+    .title {
+      font-size: 24px;
+    }
+    .button {
+      margin-left: 0;
+    }
+  }
+}
+
 @media screen and (max-width: $bp-xs) {
   .img__sidebar {
     width: 100%;

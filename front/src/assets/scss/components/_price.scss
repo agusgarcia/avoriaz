@@ -12,3 +12,19 @@
     letter-spacing: 2px;
   }
 }
+
+@media screen and (max-width: $bp-xl) {
+  .price {
+    span {
+      font-size: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: $bp-s) {
+  .price {
+    span {
+      font-size: 30px;
+    }
+  }
+}
