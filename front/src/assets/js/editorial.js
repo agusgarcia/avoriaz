@@ -1,8 +1,6 @@
 import $ from 'jquery';
-import Swiper from 'swiper/dist/js/swiper.js';
+import Swiper from 'swiper/dist/js/swiper';
 import ScrollMagic from 'scrollmagic';
-import 'animation.gsap';
-import 'debug.addIndicators';
 import Plyr from 'plyr';
 
 export default class Editorial {

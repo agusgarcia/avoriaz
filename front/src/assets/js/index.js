@@ -1,7 +1,6 @@
 import './../scss/index.scss';
 import $ from 'jquery';
 import Common from './common';
-// import './css-polyfill';
 
 export class App {
   constructor () {

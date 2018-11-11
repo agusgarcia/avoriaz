@@ -367,7 +367,6 @@
       }
       .activity {
         width: 50%;
-        flex-basis: auto;
         flex: 1 1;
         @supports (object-fit: cover) {
           flex: auto;
@@ -397,14 +396,9 @@
       }
       a {
         background-color: $orange;
-        //display: block;
-        //padding: 20px;
         margin-left: auto;
-        //color: $white;
-        //text-transform: uppercase;
-        //font-weight: bold;
         position: absolute;
-        bottom: -75px;
+        bottom: -79px;
         right: 0;
       }
       p {
@@ -422,7 +416,14 @@
         order: 1;
         flex-basis: 33%;
         position: relative;
-        align-self: flex-start;
+        align-self: stretch;
+        .activity {
+          height: 100px;
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
         .activity {
           width: 100%;
         }

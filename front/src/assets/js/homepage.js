@@ -1,8 +1,6 @@
 import $ from 'jquery';
-import Swiper from 'swiper/dist/js/swiper.js';
+import Swiper from 'swiper/dist/js/swiper';
 import ScrollMagic from 'ScrollMagic';
-import 'animation.gsap';
-import 'debug.addIndicators';
 
 export default class Homepage {
   constructor () {

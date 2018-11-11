@@ -14,6 +14,38 @@
   }
 }
 
+$padding-top: 140px;
+$margin-top: 200px;
+$padding-left: 50px;
+$margin-left: 50px;
+
+.items__container {
+  .item:nth-child(3n) + .sidebar {
+    outline-width: 90px;
+    padding-top: 80px;
+    margin-top: -50px;
+    margin-right: -10%;
+    align-items: center;
+  }
+  .sidebar {
+    outline: 140px solid $pink;
+    flex-basis: calc(33% - 20px);
+    margin: 20px;
+    margin-right: -50px;
+    flex-grow: 1;
+
+    &__content {
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .button {
+        margin: 0;
+      }
+    }
+  }
+}
+
 /* White sidebar inside an image */
 .img__sidebar {
   position: absolute;
@@ -95,26 +127,71 @@
 }
 
 @media screen and (max-width: $bp-xl) {
-  .sidebar {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 60px;
+  .items__container {
+    .item:nth-child(3n) + .sidebar {
+      outline-width: 140px;
+      padding-top: 30px;
+      margin-top: 20px;
+      margin-right: 0;
+      align-items: flex-start;
+    }
+    .item:nth-child(2n) + .sidebar {
+      outline-width: 90px;
+      padding-top: 80px;
+      margin-top: -50px;
+      margin-right: -10%;
+      align-items: center;
+    }
+    .sidebar {
+      max-width: 100%;
+      margin-right: -35px;
+    }
+  }
+}
+
+@media screen and (max-width: $bp-l) {
+  .item {
+    //flex-basis: calc(50% - 60px);
+  }
+}
+
+@media screen and (max-width: $bp-m) {
+  .items__container {
+    .sidebar {
+      outline-width: 90px;
+    }
   }
 }
 
 @media screen and (max-width: $bp-s) {
-  .sidebar {
-    padding-top: 30px;
-    .title {
-      font-size: 24px;
-    }
-    .button {
-      margin-left: 0;
+  .items__container {
+    .sidebar {
+      padding-top: 30px;
+      margin-right: 30px;
+
+      .title {
+        font-size: 24px;
+      }
+      .button {
+        margin-left: 0;
+      }
     }
   }
 }
 
 @media screen and (max-width: $bp-xs) {
+  .items__container {
+    .sidebar {
+      margin-right: 0;
+    }
+    .item:nth-child(2n) + .sidebar {
+      outline-width: 90px;
+      padding-top: 30px;
+      margin-top: 20px;
+      margin-right: 0;
+      align-items: flex-start;
+    }
+  }
   .img__sidebar {
     width: 100%;
     max-width: unset;

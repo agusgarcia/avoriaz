@@ -23,7 +23,9 @@
 @import "./components/lines";
 @import "./components/layouts";
 @import "./components/price";
+@import "./components/item";
 // Layouts
+@import "layouts/pages";
 @import "layouts/homepage";
 @import "layouts/editorial";
 @import "layouts/portail";
